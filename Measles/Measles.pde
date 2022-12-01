@@ -1,40 +1,48 @@
 //Global Variables
 int appWidth, appHeight;
+int reset=1;
+Boolean nightMode = false;
+color resetWhite=#FFFFFF;
 //
 void setup() {
   //Display & Orientation
-  size(600, 400);
-  //fullScreen(); //displayWidth & displayHeight
-  displayOrientation(); //need smaller dimension (ternary operator)
+  size(600, 400); 
+  displayOrientation();
   appWidth = width;
   appHeight = height;
   //
   population();
-  //Theme: i.e Face (will work in portrait and landscape)
-  faceSetup();
-  eyes(); //Student created
-  nose(); //Student created
-  mouth(); //Student created
-  measlesDynamic(); //Teacher Lesson
-  //Back Image with tint()
-} //End setup
+  //Theme: i.e. Face (will work in portrait and landscape)
+  faceSetup(); //Teacher Lesson
+  //Background Image (could be in draw too)
+}//End setup
 //
 void draw() {
-  //OS System Start Button
-  //Splash Screen Level start button | Measles Reset Button
-  //Theme: measles with different sizes and colours
-} //End draw
+  //OS System Button
+  //Start Button | Measles Reset Button
+  //Theme: face & measles with different sizes and colours
+  measlesDynamic(); //Teacher Lesson
+  eyes(); //Student created
+  mouth(); //Student created
+  nose(); //Student created
+}//End draw
 //
 void keyPressed() {
-  //keyBoard Shortcuts
-} //End keyPressed
+  //KeyBoard Shortcuts
+  if ( key=='N' | key=='n') {
+    if ( nightMode==false ) {
+      nightMode = true;
+    } else {
+      nightMode=false;
+    }
+  }
+}//End keyPressed
 //
 void mousePressed() {
-  //CAUTION: all buttons have Hover Over
-  //OS System Start Button
-  //Splash Screen Start Button
+  //OS System Button
+  //Start Button
   //Quit Button
-  //Night Mode (includes day mode)
-} //End mousePressed
+  //Night Mode
+}//End mousePressed
 //
 //End MAIN Program
