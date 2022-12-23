@@ -132,10 +132,10 @@ void draw() {
   ellipse(PupilRX, PupilRY, PupilD, PupilD);
   fill(resetWhite);
   //
-  ellipse(EyeLXLight, EyeLYLight, EyeLightDiameter, EyeLightDiameter);
-  ellipse(EyeRXLight, EyeRYLight, EyeLightDiameter, EyeLightDiameter);
-  ellipse(xLeftLight, yLeftLight, lightDiameter, lightDiameter);
-  ellipse(xRightLight, yRightLight, lightDiameter, lightDiameter);
+  ellipse(EyeLXLight, EyeLYLight, EyeEyeRLD, EyeEyeRLD);
+  ellipse(EyeRXLight, EyeRYLight, EyeEyeRLD, EyeEyeRLD);
+  ellipse(EyeRLLX, EyeRLLY, EyeRLD, EyeRLD);
+  ellipse(EyeRLRX, EyeRLRY, EyeRLD, EyeRLD);
   stroke(waterColor);
   strokeWeight(5);
   //
@@ -144,7 +144,7 @@ void draw() {
   fill(resetWhite);
   stroke(1);
   //
-  triangle(xNoseBridge, yNoseBridge, xLeftNostril, yLeftNostril, xRightNostril, yRightNostril);
+  triangle(NoseLX, NoseLY, NoseTLX, NoseTLY, NoseTRX, NoseTRY);
   strokeCap(SQUARE); //ROUND (default), PROJECT
   strokeWeight(thack);
   //

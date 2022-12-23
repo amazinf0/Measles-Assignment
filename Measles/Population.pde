@@ -1,4 +1,3 @@
-
 //Global Variables
 color resetWhite=#FFFFFF, lightred=#F55E72, black=#000000; //similar to int declaration
 color backgroundColor;
@@ -9,11 +8,11 @@ float HeadX, HeadY, HeadWD, HeadHD, HeadRadius, SmallD, MiddleX, MiddleY;
 float EyeLX, EyeLY, EyeRX, EyeRY, EyeW, EyeH;
 float IrisLX, IrisLY, IrisRX, IrisRY, IrisD;
 float PupilLX, PupilLY, PupilRX, PupilRY, PupilD;
-float EyeLXLight, EyeLYLight, EyeRXLight, EyeRYLight, EyeLightDiameter;
-float xLeftLight, yLeftLight, xRightLight, yRightLight, lightDiameter;
+float EyeLXLight, EyeLYLight, EyeRXLight, EyeRYLight, EyeEyeRLD;
+float EyeRLLX, EyeRLLY, EyeRLRX, EyeRLRY, EyeRLD;
 float xLeftTears, yLeftTears, xLeftEndTears, yLeftEndTears;
 float xRightTears, yRightTears, xRightEndTears, yRightEndTears;
-float xNoseBridge, yNoseBridge, xLeftNostril, yLeftNostril, xRightNostril, yRightNostril;
+float NoseLX, NoseLY, NoseTLX, NoseTLY, NoseTRX, NoseTRY;
 float xLeftMoustache, yLeftMoustache, xRightMoustache, yRightMoustache;
 int thack=15;
 float xMeasle, yMeasle, measleDiameter;
@@ -56,13 +55,13 @@ void populationVariables () {
   EyeLYLight = MiddleY-SmallD*1/5.5;
   EyeRXLight = MiddleX+SmallD*1/5.7;
   EyeRYLight = EyeLYLight;
-  EyeLightDiameter = SmallD*1/50;
+  EyeEyeRLD = SmallD*1/50;
   //
-  xLeftLight = MiddleX-SmallD*1/7;
-  yLeftLight = MiddleY-SmallD*1/6.7;
-  xRightLight = MiddleX+SmallD*1/7.3;
-  yRightLight = yLeftLight;
-  lightDiameter = SmallD*1/80;
+  EyeRLLX = MiddleX-SmallD*1/7;
+  EyeRLLY = MiddleY-SmallD*1/6.7;
+  EyeRLRX = MiddleX+SmallD*1/7.3;
+  EyeRLRY = EyeRLLY;
+  EyeRLD = SmallD*1/80;
   //
   xLeftTears = EyeLXLight;
   yLeftTears = MiddleY-SmallD*1/8;
@@ -74,12 +73,12 @@ void populationVariables () {
   xRightEndTears = EyeRXLight;
   yRightEndTears = MiddleY+SmallD*1/8;
   //
-  xNoseBridge = MiddleX;
-  yNoseBridge = MiddleY-SmallD*1/5;
-  xLeftNostril = MiddleX-SmallD*1/10;
-  yLeftNostril = MiddleY+SmallD*1/8;
-  xRightNostril = MiddleX+SmallD*1/10;
-  yRightNostril = yLeftNostril;
+  NoseLX = MiddleX;
+  NoseLY = MiddleY-SmallD*1/5;
+  NoseTLX = MiddleX-SmallD*1/10;
+  NoseTLY = MiddleY+SmallD*1/8;
+  NoseTRX = MiddleX+SmallD*1/10;
+  NoseTRY = NoseTLY;
   //
   xLeftMoustache = EyeLX+SmallD*1/10;
   yLeftMoustache = MiddleY+SmallD*1/6;
