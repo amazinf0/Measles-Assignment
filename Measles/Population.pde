@@ -10,10 +10,7 @@ float IrisLX, IrisLY, IrisRX, IrisRY, IrisD;
 float PupilLX, PupilLY, PupilRX, PupilRY, PupilD;
 float EyeLXLight, EyeLYLight, EyeRXLight, EyeRYLight, EyeEyeRLD;
 float EyeRLLX, EyeRLLY, EyeRLRX, EyeRLRY, EyeRLD;
-float xLeftTears, yLeftTears, xLeftEndTears, yLeftEndTears;
-float xRightTears, yRightTears, xRightEndTears, yRightEndTears;
 float NoseLX, NoseLY, NoseTLX, NoseTLY, NoseTRX, NoseTRY;
-float xLeftMoustache, yLeftMoustache, xRightMoustache, yRightMoustache;
 int thack=15;
 float xMeasle, yMeasle, measleDiameter;
 Boolean widthLarger1=false, heightLarger1=false;
@@ -63,27 +60,12 @@ void populationVariables () {
   EyeRLRY = EyeRLLY;
   EyeRLD = SmallD*1/80;
   //
-  xLeftTears = EyeLXLight;
-  yLeftTears = MiddleY-SmallD*1/8;
-  xLeftEndTears = EyeLXLight;
-  yLeftEndTears = MiddleY+SmallD*1/8;
-  //
-  xRightTears = EyeRXLight;
-  yRightTears = MiddleY-SmallD*1/8;
-  xRightEndTears = EyeRXLight;
-  yRightEndTears = MiddleY+SmallD*1/8;
-  //
   NoseLX = MiddleX;
   NoseLY = MiddleY-SmallD*1/5;
   NoseTLX = MiddleX-SmallD*1/10;
   NoseTLY = MiddleY+SmallD*1/8;
   NoseTRX = MiddleX+SmallD*1/10;
   NoseTRY = NoseTLY;
-  //
-  xLeftMoustache = EyeLX+SmallD*1/10;
-  yLeftMoustache = MiddleY+SmallD*1/6;
-  xRightMoustache = EyeRX-SmallD*1/10;
-  yRightMoustache = yLeftMoustache;
   //
   HeadRadius = SmallD*1/2.6;
   //

@@ -139,8 +139,6 @@ void draw() {
   stroke(waterColor);
   strokeWeight(5);
   //
-  line (xLeftTears, yLeftTears, xLeftEndTears, yLeftEndTears);
-  line (xRightTears, yRightTears, xRightEndTears, yRightEndTears);
   fill(resetWhite);
   stroke(1);
   //
@@ -148,7 +146,6 @@ void draw() {
   strokeCap(SQUARE); //ROUND (default), PROJECT
   strokeWeight(thack);
   //
-  line (xLeftMoustache, yLeftMoustache, xRightMoustache, yRightMoustache);
   strokeWeight(1);
   //
   dotRandom();
