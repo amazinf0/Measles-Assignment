@@ -18,8 +18,7 @@ void mousePressed() {
     
     
     ellipse(HeadX, HeadY, HeadWD, HeadHD);
-    if (mouseX> quitX && mouseX< quitX+quitButtonWidth && mouseY> quitY && mouseY< quitY+quitButtonHeight) exit();
-    if (mouseX>stopX && mouseX<stopX+SmallD*1/5 && mouseY>stopY && mouseY<stopY+SmallD*1/10) noLoop();
+    if (mouseX> quitX && mouseX< quitX+QuitButtonW && mouseY> quitY && mouseY< quitY+QuitButtonH) exit();
     dotRandom();
   }
   //
@@ -49,11 +48,4 @@ void mousePressed() {
     dotRandom();
     //
   }//End Right Mouse Button
-  
-  
-
-  //
-  //Note: Mouse WHEEL is also available
-  //if ( mouseButton == WHEEL ) {}//End Mouse WHEEL
-  //
 }//End mousePressed

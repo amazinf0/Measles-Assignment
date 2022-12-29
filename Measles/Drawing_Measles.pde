@@ -1,23 +1,22 @@
 void dotRandom() {
-  xMeasle = random(MiddleX-HeadRadius, MiddleX+HeadRadius);
-  yMeasle = random(MiddleY-HeadRadius, MiddleY+HeadRadius); //if zero is first, then default
-  if (xMeasle>MiddleX) {
-    xlength= xMeasle-MiddleX;
+  MeasleX = random(MiddleX-HeadRadius, MiddleX+HeadRadius);
+  MeasleY = random(MiddleY-HeadRadius, MiddleY+HeadRadius); 
+  if (MeasleX>MiddleX) {
+    LengthX= MeasleX-MiddleX;
   } else {
-    xlength=MiddleX-xMeasle;
+    LengthX=MiddleX-MeasleX;
   }
-  if (yMeasle>MiddleY) {
-    ylength= yMeasle-MiddleY;
+  if (MeasleY>MiddleY) {
+    LengthY= MeasleY-MiddleY;
   } else {
-    ylength=MiddleY-yMeasle;
+    LengthY=MiddleY-MeasleY;
   }
-  radiusTest = sqrt(sq(xlength)+sq(ylength));
-  if (HeadRadius<radiusTest) {
-    //fill(green);
+  TestR = sqrt(sq(LengthX)+sq(LengthY));
+  if (HeadRadius<TestR) {
     fill(backgroundColor);
     println("dotRandom - backgroundColor: " + backgroundColor); 
   } else {
-    fill(lightred);
+    fill(Red);
   }
 }
 //End Measles

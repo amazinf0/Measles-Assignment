@@ -1,71 +1,61 @@
 //Global Variables
-color red=#FF0022, resetDefaultInk=#FFFFFF; // not nightMode friendly
 String title = "Measles Assignment";
 String quitText = "Exit (E)";
 String stopText = "Pause (P)";
 String startText = "Press S or Left Click To Start \n Press Right Click To Reset \n Press P To Pause";
-float titleX, titleY, titleWidth, titleHeight, titleRadii;
-PFont titleFont;
-float quitTextX, quitTextY, quitTextWidth, quitTextHeight;
-PFont quitTextFont;
-float stopTextX, stopTextY, stopTextWidth, stopTextHeight;
-PFont stopTextFont;
-float startTextX, startTextY, startTextWidth, startTextHeight;
-PFont startTextFont;
+float TitleX, TitleY, TitleW, TitleH, TitleR;
+PFont TitleF;
+float QuitTX, QuitTY, QuitTW, QuitTH;
+PFont QuitF;
+float StartTX, StartTY, StartTW, StartTH;
+PFont StartF;
 //
 void titleText() {
   //Population
-  titleX = width*1.4/5;
-  titleY = height*1/50;
-  titleWidth = width*2.1/5;
-  titleHeight = height*1/12;
-  titleRadii = 10;
+  TitleX = width*1.4/5;
+  TitleY = height*1/50;
+  TitleW = width*2.1/5;
+  TitleH = height*1/12;
+  TitleR = 10;
   //
-  //Single Executed Code
-  //Fonts rom OS (Operating System)
-  //String[] fontList = PFont.list(); //To list all fonts available on OS
-  //printArray(fontList); //For Listing all possible fonts to choose from, then createFont
-  titleFont = createFont("Impact", 281); //Verify the font exists in Processing.JAVA
-  // Tools / Create Font / Find font in list to verify / DO NOT PRESS "OK" (BUG)
+  TitleF = createFont("Chalkboard-Bold-48", 281); 
   //
-  //Layout our text space and typographical features
-  rect(titleX, titleY, titleWidth, titleHeight, titleRadii);
+  rect(TitleX, TitleY, TitleW, TitleH, TitleR);
   //
-  //Repeated Executed Code
-  fill(red); //Ink, hexidecimal copied from Color Selector
-  textAlign( CENTER, CENTER ); //Align X*Y, see Processing.org / Reference
-  //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
-  int titleSize = 40; //Change this number until it fits
-  textFont(titleFont, titleSize);
-  text(title, titleX, titleY, titleWidth, titleHeight);
-  fill(resetDefaultInk);
+  fill(Black); 
+  textAlign( CENTER, CENTER );
+  int titleSize = 40; 
+  textFont(TitleF, titleSize);
+  text(title, TitleX, TitleY, TitleW, TitleH);
+  fill(White);
 }//End titleText
 //
 void quitText() {
   //Population
-  quitTextX = MiddleX - SmallD/1.49;
-  quitTextY = MiddleY - SmallD/1.97;
-  quitTextWidth = SmallD*1/5;
-  quitTextHeight = SmallD*1/10;
-  quitTextFont = createFont("TimesNewRomanPSMT", 603);
-  int quitTextSize = 35;
+  QuitTX = MiddleX - SmallD/1.49;
+  QuitTY = MiddleY - SmallD/1.97;
+  QuitTW = SmallD*1/5;
+  QuitTH = SmallD*1/10;
+  QuitF = createFont("Chalkboard-Bold-48", 603);
+  int QuitS = 35;
   //
+  fill(Black);
   textAlign(CENTER, CENTER);
-  textFont(quitTextFont, quitTextSize);
-  text(quitText, quitTextX, quitTextY, quitTextWidth, quitTextHeight);
+  textFont(QuitF, QuitS);
+  text(quitText, QuitTX, QuitTY, QuitTW, QuitTH);
 }//End quitText
 //
 void startText() {
   //Population
-  startTextX = MiddleX-SmallD*1/4;
-  startTextY = MiddleY + SmallD*1/2.6;
-  startTextWidth = SmallD*1/2;
-  startTextHeight = SmallD*1/10;
-  startTextFont = createFont("TimesNewRomanPS-BoldItalicMT", 600);
-  int startTextSize = 18;
+  StartTX = MiddleX-SmallD*1/4;
+  StartTY = MiddleY + SmallD*1/2.6;
+  StartTW = SmallD*1/2;
+  StartTH = SmallD*1/10;
+  StartF = createFont("Chalkboard-Bold-48", 600);
+  int StartS = 15;
   //
   textAlign(CENTER, CENTER);
-  textFont(startTextFont, startTextSize);
-  text(startText, startTextX, startTextY, startTextWidth, startTextHeight);
+  textFont(StartF, StartS);
+  text(startText, StartTX, StartTY, StartTW, StartTH);
 }//End startText
 //

@@ -1,6 +1,6 @@
 void Images(){
-int picWidth1 = 1000;
-int picHeight1 = 317;
+int picWidth1 = 300;
+int picHeight1 = 500;
   //
   if ( picWidth1 >= picHeight1 ) {
     //True if Landscape or Square
@@ -13,14 +13,13 @@ int picHeight1 = 317;
     imgSD = picWidth1;
     heightLarger1 = true;
   } //End Image Dimension Comparison
-  //Note: println also verifies decimal places, complier will truncate
   println("imgSD:", imgSD, "\t imgLD:", imgLD,
     "\t widthLarger1:", widthLarger1, " \t heightLarger1:", heightLarger1); 
   //
   imgX = MiddleX-SmallD*1/6;
-  imgY = MiddleY+SmallD*1/5;
+  imgY = MiddleY+SmallD*0.6/5;
   imgW = SmallD*1/3; 
-  imgH = SmallD*1/10;
+  imgH = SmallD*2/10;
   //
   //Image 2
   //
@@ -29,13 +28,13 @@ int picHeight1 = 317;
   //
   if ( picWidth2 >= picHeight2 ) {
     //True if Landscape or Square
-    imageLargerDimension2 = picWidth2;
-    imageSmallD2 = picHeight2;
+    imgLD2 = picWidth2;
+    imgSD2 = picHeight2;
     widthLarger2 = true;
   } else {
     //False if Portrait
-    imageLargerDimension2 = picHeight2;
-    imageSmallD2 = picWidth2;
+    imgLD2 = picHeight2;
+    imgSD2 = picWidth2;
     heightLarger2 = true;
   }
 } //End Image Dimension Comparison

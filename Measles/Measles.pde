@@ -1,20 +1,17 @@
 //Global Variables
-color green=#00FF00, brown=#954C48, waterColor=#b9dbe1, resetButtonColor=#FFFFFF, buttonFill; //Not night mode friendly colors
+color Green=#00FF00, Brown=#954C48, buttonFill, White=#FFFFFF, Red=#F55E72, Black=000000, red=#FF0022; //Not night mode friendly colors
 PImage pic2;
-float imageX2, imageY2, imageWidth2, imageHeight2, imageLargerDimension2, imageSmallD2, imageWidthRatio2=0.0, imageHeightRatio2=0.0;
-float quitX, quitY, quitButtonWidth, quitButtonHeight;
-float stopX, stopY, stopButtonWidth, stopButtonHeight;
-float restartX, restartY, restartButtonWidth, restartButtonHeight;
-float xlength;
-float ylength;
-float radiusTest;
+float quitX, quitY, QuitButtonW, QuitButtonH;
+float imgX2, imgY2, imgW2, imgH2, imgLD2, imgSD2, imgWR2=0.0, imgHR2=0.0;
+float TestR;
+float LengthX, LengthY;
 int centeringButtonWidth = width*1/4;
 int centeringButtonHeight = height*1/4;
 int h = hour();
 Boolean noLoop=false, loop=false;
-Boolean nightMode=false;
 Boolean widthLarger2=false, heightLarger2=false;
 Boolean firstClick=true;
+Boolean nightMode=false;
 //
 void setup() {
   //Display Geometry
@@ -26,15 +23,13 @@ void setup() {
   populationVariables();
   //
   Images();
-  println("imageSmallD2:", imageSmallD2, "\t imageLargerDimension2:", imageLargerDimension2,
+  println("imgSD2:", imgSD2, "\t imgLD2:", imgLD2,
     "\t widthLarger2:", widthLarger2, " \t heightLarger2:", heightLarger2); 
   //
-  imageX2 = MiddleX-SmallD*1/4;
-  imageY2 = MiddleY-SmallD*1/3.3;
-  imageWidth2 = SmallD*1/2; 
-  imageHeight2 = SmallD*1/10;
-  //
-  //nightMode setup
+  imgX2 = MiddleX-SmallD*1/4;
+  imgY2 = MiddleY-SmallD*1/3.3;
+  imgW2 = SmallD*1/2; 
+  imgH2 = SmallD*1/10;
   //
   println("1 to backgroundColorRandom "); 
   backgroundColorRandom();
@@ -47,28 +42,22 @@ void setup() {
 //
 void draw() {
   //Hover-over
-  if (mouseX> quitX && mouseX< quitX+quitButtonWidth && mouseY> quitY && mouseY< quitY+quitButtonHeight) {
-    buttonFill = green;
-  } else {
+  if (mouseX> quitX && mouseX< quitX+QuitButtonW && mouseY> quitY && mouseY< quitY+QuitButtonH) {
     buttonFill = red;
+  } else {
+    buttonFill = Green;
   }//End Hover-over
   fill(buttonFill); //2-colors to start , remember nightMode adds choice
   //
-  pic1= loadImage("../Images Used/kindpng_7571372.png");
+  pic1= loadImage("../Images Used/cartoon.png");
   image(pic1, imgX, imgY, imgW, imgH);
-  pic2= loadImage("../Images Used/pngkey.com-eye-brow-png-9873410.png");
-  image(pic2, imageX2, imageY2, imageWidth2, imageHeight2);
+  pic2= loadImage("../Images Used/eyebrows.png");
+  image(pic2, imgX2, imgY2, imgW2, imgH2);
   //
-  rect(quitX, quitY, quitButtonWidth, quitButtonHeight);
+  rect(quitX, quitY, QuitButtonW, QuitButtonH);
   //
-  if (mouseX>stopX && mouseX<stopX+SmallD*1/5 && mouseY>stopY && mouseY<stopY+SmallD*1/10) {
-    buttonFill = green;
-  } else {
-    buttonFill = red;
-  }
   fill(buttonFill);
-  rect(stopX, stopY, stopButtonWidth, stopButtonHeight);
-  fill(resetButtonColor);
+  fill(White);
   //
   titleText();
   quitText();
@@ -77,26 +66,26 @@ void draw() {
   //
   ellipse(EyeLX, EyeLY, EyeW, EyeH);
   ellipse(EyeRX, EyeRY, EyeW, EyeH);
-  fill(brown);
+  fill(Brown);
   //
   ellipse(IrisLX, IrisLY, IrisD, IrisD);
   ellipse(IrisRX, IrisRY, IrisD, IrisD);
-  fill(black);
+  fill(Black);
   //
   ellipse(PupilLX, PupilLY, PupilD, PupilD);
   ellipse(PupilRX, PupilRY, PupilD, PupilD);
-  fill(resetWhite);
+  fill(White);
   //
   ellipse(EyeLXLight, EyeLYLight, EyeEyeRLD, EyeEyeRLD);
   ellipse(EyeRXLight, EyeRYLight, EyeEyeRLD, EyeEyeRLD);
-  stroke(waterColor);
+  stroke(Black);
   strokeWeight(5);
   //
-  fill(resetWhite);
+  fill(White);
   stroke(1);
   //
   triangle(NoseLX, NoseLY, NoseTLX, NoseTLY, NoseTRX, NoseTRY);
-  strokeCap(SQUARE); //ROUND (default), PROJECT
+  strokeCap(SQUARE); 
   strokeWeight(thack);
   //
   strokeWeight(1);
@@ -104,10 +93,10 @@ void draw() {
   dotRandom();
   
   noStroke();
-  measleDiameter = random(SmallD* 1/random(25, 75));
-  ellipse(xMeasle, yMeasle, measleDiameter, measleDiameter);
-  stroke(1); //reset Default
-  fill(resetWhite);
+  MeasleD = random(SmallD* 1/random(25, 75));
+  ellipse(MeasleX, MeasleY, MeasleD, MeasleD);
+  stroke(1); 
+  fill(White);
   //
 }//End draw
 //End MAIN Program
