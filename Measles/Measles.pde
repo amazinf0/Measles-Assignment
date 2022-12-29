@@ -118,8 +118,6 @@ void draw() {
   startText();
   fill(lightred);
   //
-  //
-  //
   ellipse(EyeLX, EyeLY, EyeW, EyeH);
   ellipse(EyeRX, EyeRY, EyeW, EyeH);
   fill(brown);
