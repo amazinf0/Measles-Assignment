@@ -9,7 +9,6 @@ float EyeLX, EyeLY, EyeRX, EyeRY, EyeW, EyeH;
 float IrisLX, IrisLY, IrisRX, IrisRY, IrisD;
 float PupilLX, PupilLY, PupilRX, PupilRY, PupilD;
 float EyeLXLight, EyeLYLight, EyeRXLight, EyeRYLight, EyeEyeRLD;
-float EyeRLLX, EyeRLLY, EyeRLRX, EyeRLRY, EyeRLD;
 float NoseLX, NoseLY, NoseTLX, NoseTLY, NoseTRX, NoseTRY;
 int thack=15;
 float xMeasle, yMeasle, measleDiameter;
@@ -54,12 +53,6 @@ void populationVariables () {
   EyeRYLight = EyeLYLight;
   EyeEyeRLD = SmallD*1/50;
   //
-  EyeRLLX = MiddleX-SmallD*1/7;
-  EyeRLLY = MiddleY-SmallD*1/6.7;
-  EyeRLRX = MiddleX+SmallD*1/7.3;
-  EyeRLRY = EyeRLLY;
-  EyeRLD = SmallD*1/80;
-  //
   NoseLX = MiddleX;
   NoseLY = MiddleY-SmallD*1/5;
   NoseTLX = MiddleX-SmallD*1/10;
@@ -75,9 +68,4 @@ void populationVariables () {
   quitButtonWidth = SmallD*1/5;
   quitButtonHeight = SmallD*1/10;
   //
-  //Stop Button
-  stopX = MiddleX + SmallD*1/2.12;
-  stopY = MiddleY - SmallD/2;
-  stopButtonWidth = SmallD*1/5;
-  stopButtonHeight = SmallD*1/10;
 }

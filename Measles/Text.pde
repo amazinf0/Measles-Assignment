@@ -1,9 +1,9 @@
 //Global Variables
 color red=#FF0022, resetDefaultInk=#FFFFFF; // not nightMode friendly
-String title = "Measles Simulator";
-String quitText = "Quit (Q)";
-String stopText = "Stop (S)";
-String startText = "Press E/Tap Left Side to start, \n Right Click to reset";
+String title = "Measles Assignment";
+String quitText = "Exit (E)";
+String stopText = "Pause (P)";
+String startText = "Press S or Left Click To Start \n Press Right Click To Reset \n Press P To Pause";
 float titleX, titleY, titleWidth, titleHeight, titleRadii;
 PFont titleFont;
 float quitTextX, quitTextY, quitTextWidth, quitTextHeight;
@@ -35,7 +35,7 @@ void titleText() {
   fill(red); //Ink, hexidecimal copied from Color Selector
   textAlign( CENTER, CENTER ); //Align X*Y, see Processing.org / Reference
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
-  int titleSize = 50; //Change this number until it fits
+  int titleSize = 40; //Change this number until it fits
   textFont(titleFont, titleSize);
   text(title, titleX, titleY, titleWidth, titleHeight);
   fill(resetDefaultInk);
@@ -55,28 +55,14 @@ void quitText() {
   text(quitText, quitTextX, quitTextY, quitTextWidth, quitTextHeight);
 }//End quitText
 //
-void stopText() {
-  //Population
-  stopTextX = MiddleX + SmallD*1/2.12;
-  stopTextY = quitTextY;
-  stopTextWidth = SmallD*1/5;
-  stopTextHeight = SmallD*1/10;
-  stopTextFont = createFont("TimesNewRomanPSMT", 603);
-  int stopTextSize = 35;
-  //
-  textAlign(CENTER, CENTER);
-  textFont(stopTextFont, stopTextSize);
-  text(stopText, stopTextX, stopTextY, stopTextWidth, stopTextHeight);
-}//End stopText
-//
 void startText() {
   //Population
   startTextX = MiddleX-SmallD*1/4;
-  startTextY = MiddleY + SmallD*1/2.5;
+  startTextY = MiddleY + SmallD*1/2.6;
   startTextWidth = SmallD*1/2;
   startTextHeight = SmallD*1/10;
   startTextFont = createFont("TimesNewRomanPS-BoldItalicMT", 600);
-  int startTextSize = 25;
+  int startTextSize = 18;
   //
   textAlign(CENTER, CENTER);
   textFont(startTextFont, startTextSize);
