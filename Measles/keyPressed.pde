@@ -18,7 +18,7 @@ void mousePressed() {
     
     
     ellipse(HeadX, HeadY, HeadWD, HeadHD);
-    if (mouseX> quitX && mouseX< quitX+QuitButtonW && mouseY> quitY && mouseY< quitY+QuitButtonH) exit();
+    if (mouseX> quitX && mouseX< quitX+QuitW && mouseY> quitY && mouseY< quitY+QuitH) exit();
     dotRandom();
   }
   //

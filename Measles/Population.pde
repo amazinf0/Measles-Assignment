@@ -42,8 +42,8 @@ void populationVariables () {
   //
   quitX = MiddleX - SmallD/1.5;
   quitY = MiddleY - SmallD/2;
-  QuitButtonW = SmallD*1/5;
-  QuitButtonH = SmallD*1/10;
+  QuitW = SmallD*1/5;
+  QuitH = SmallD*1/10;
   //
   EyeLX = MiddleX-SmallD*1/6.6;
   EyeLY = MiddleY-SmallD*1/6;

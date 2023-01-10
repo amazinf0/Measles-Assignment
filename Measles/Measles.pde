@@ -1,7 +1,7 @@
 //Global Variables
 color Green=#00FF00, Brown=#954C48, buttonFill, White=#FFFFFF, Red=#F55E72, Black=000000, red=#FF0022; //Not night mode friendly colors
 PImage pic2;
-float quitX, quitY, QuitButtonW, QuitButtonH;
+float quitX, quitY, QuitW, QuitH;
 float imgX2, imgY2, imgW2, imgH2, imgLD2, imgSD2, imgWR2=0.0, imgHR2=0.0;
 float TestR;
 float LengthX, LengthY;
@@ -42,7 +42,7 @@ void setup() {
 //
 void draw() {
   //Hover-over
-  if (mouseX> quitX && mouseX< quitX+QuitButtonW && mouseY> quitY && mouseY< quitY+QuitButtonH) {
+  if (mouseX> quitX && mouseX< quitX+QuitW && mouseY> quitY && mouseY< quitY+QuitH) {
     buttonFill = red;
   } else {
     buttonFill = Green;
@@ -54,7 +54,7 @@ void draw() {
   pic2= loadImage("../Images Used/eyebrows.png");
   image(pic2, imgX2, imgY2, imgW2, imgH2);
   //
-  rect(quitX, quitY, QuitButtonW, QuitButtonH);
+  rect(quitX, quitY, QuitW, QuitH);
   //
   fill(buttonFill);
   fill(White);
