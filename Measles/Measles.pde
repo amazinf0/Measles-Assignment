@@ -41,6 +41,7 @@ void setup() {
 }//End setup
 //
 void draw() {
+  Cursors();
   //Hover-over
   if (mouseX> quitX && mouseX< quitX+QuitW && mouseY> quitY && mouseY< quitY+QuitH) {
     buttonFill = red;
