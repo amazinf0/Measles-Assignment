@@ -2,6 +2,7 @@ void keyPressed() {
   if (key=='e' || key=='E') exit();
   if (key=='s' || key=='S') loop();
   if (key=='p' || key=='P') noLoop();
+  if (key=='n' || key=='N') nightMode=false;
 }//End keyPressed
 //
 void mousePressed() {

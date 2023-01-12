@@ -14,7 +14,7 @@ void dotRandom() {
   TestR = sqrt(sq(LengthX)+sq(LengthY));
   if (HeadRadius<TestR) {
     fill(backgroundColor);
-    println("dotRandom - backgroundColor: " + backgroundColor); 
+    println("Background Color: " + backgroundColor); 
   } else {
     fill(Red);
   }
